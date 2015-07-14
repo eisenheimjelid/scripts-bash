@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Iniciando aliases..."
+##
+# Comando y alias para buscar el espacio libre en disco duro
+##
+alias disc_free='df -Th --type=ext4'
+
+##
+# Comando y alias para listar los archivos de un directorio
+##
+alias ll='ls -l'
+
+##
+# Comando y alias para listar todos los archivos de un directorio
+##
+alias lla='ls -la'
+
+##
+# Comando y alias para eliminar de manera interactiva archivos,
+# es muy util para evitar accidentes
+##
+alias rm='rm -i'
+
+##
+# Comando y alias para listar los servicios escuchando y conexiones
+# establecidas de red en el sistema por IP y segmentos
+##
+alias red_servicios='netstat -ntap'
+
+echo "Terminado aliases"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Iniciando aliases..."
+
+alias disc_free='df -Th --type=ext4'
+alias ll='ls -l'
+alias lla='ls -la'
+alias rm='rm -i'
+alias red_servicios='netstat -ntap'
+
+echo "Terminado aliases"
