@@ -28,4 +28,10 @@ alias rm='rm -i'
 ##
 alias red_servicios='netstat -ntap'
 
+##
+# Comando y alias para buscar la informacion base del sistema,
+# modelo, marca, numero de serie y/o uuid
+##
+alias me_info='sudo dmidecode -t 1'
+
 echo "Terminado aliases"

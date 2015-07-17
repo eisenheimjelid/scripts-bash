@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Iniciando twit..."
+
+##
+# Obtenemos el tiempo que ha estado funcionando el equipo
+# y lo enviamos a Twitter a través de twidge
+##
+
+# Con este comando obtenemos el tiempo que ha estado funcionando
+UP=$(uptime -p)
+
+# Con este comando obtenemos el nombre del host
+HOST=$(hostname)
+
+# Imprimimos el mensaje y lo enviamos con ciertas opciones a twidge
+echo $HOST" "$UP | twidge --config=/home/davnet/.twidgerc update
+
+# https://twitter.com/jelidleon/status/622192817071206400
+echo "Twit enviado."
