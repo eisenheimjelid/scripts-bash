@@ -1,0 +1,5 @@
+#!/bin/bash
+UP=$(uptime -p)
+HOST=$(hostname)
+echo $HOST" "$UP | twidge --config=/home/davnet/.twidgerc update
+echo "Twit enviado."
