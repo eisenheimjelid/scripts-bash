@@ -1,0 +1,40 @@
+#!/bin/bash
+
+##
+# Imprimimos una marca de tiempo e inicio del script
+##
+now=$(date)
+echo "Iniciando backup..."
+echo "$now"
+
+##
+# Nos ubicamos en el path de gitlab donde queremos
+# generar el respaldo del sistema.
+##
+cd /home/gitlab/backups
+
+##
+# Usamos el comando desde el PATH/bin de gitlab,
+# gitlab-rake para crear el respaldo.
+##
+/usr/bin/gitlab-rake gitlab:backup:create --trace
+
+##
+# Ahora movemos el archivo resultante en la ubicacion
+# donde queremos consultar el archivo.
+##
+mv /home/gitlab/backups/* /home/user/backups
+
+##
+# Corregimos los permisos de usuario, este script
+# se ejecuta con usuario de permisos elevados (o root)
+# por lo que el archivo resultante, necesita cambiar
+# de permisos, y asi poder ser consultado por otros.
+##
+chown -R user:user /home/user/backups/*
+
+##
+# Marcamos el final del script.
+##
+now=$(date)
+echo "$now Backup finalizado."

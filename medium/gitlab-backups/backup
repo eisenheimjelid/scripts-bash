@@ -1,0 +1,13 @@
+#!/bin/bash
+
+now=$(date)
+echo "Iniciando backup..."
+echo "$now"
+
+cd /home/gitlab/backups
+/usr/bin/gitlab-rake gitlab:backup:create --trace
+mv /home/gitlab/backups/* /home/user/backups
+chown -R user:user /home/user/backups/*
+
+now=$(date)
+echo "$now Backup finalizado."
