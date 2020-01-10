@@ -4,8 +4,8 @@ In 'medium' folder, here; you can find scripts for bash using libraries or addit
 
 Here is a list of scripts, where you can find "for what use" each folder here:
 
-* [Twit](https://github.com/eisenheimjelid/scripts-bash/tree/master/medium/twit] Send a twit from command-line, or get your timeline
-* [Gitlab backup](https://github.com/eisenheimjelid/scripts-bash/tree/master/medium/gitlab-backups] Create a full backup of Gitlab self-hosted
+* [Twit](https://github.com/eisenheimjelid/scripts-bash/tree/master/medium/twit) Send a twit from command-line, or get your timeline
+* [Gitlab backup](https://github.com/eisenheimjelid/scripts-bash/tree/master/medium/gitlab-backups) Create a full backup of Gitlab self-hosted
 
 ## Comments
 
